@@ -240,7 +240,13 @@
         font-size: 20px;
     }
 
+    .eventContainer{
+        padding: 10px 15px;
+    }
+
     .eventRight{
+        width: 20%;
+        padding-left: 4%;
         font-size: 8px;
     }
 
