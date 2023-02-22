@@ -1,0 +1,17 @@
+:root{
+    --tea: #cad2c5;
+    --sage: #84a98c;
+    --myrtle: #52796f;
+    --teal: #354f52;
+    --sea: #2f3e46;
+}
+
+*
+{
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}

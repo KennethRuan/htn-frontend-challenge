@@ -1,0 +1,128 @@
+.pageWrapper{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--sea);
+    overflow: hidden;
+}
+
+.loginWrapper{
+    height: 100%;
+    width: 100%;
+    padding: 0 15vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.loginContainer{
+    position: relative;
+    height: 50%;
+    width: 60%;
+    border-radius: 20px;
+
+    background-color: var(--teal);
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginTitle{
+    width: 80%;
+}
+
+.loginTitle h1{
+    font-size: 20px;
+    color: var(--tea);
+}
+
+.field{
+    width: 80%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.field h1{
+    color: var(--tea);
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.field input{
+    background-color: var(--tea);
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 0;
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+}
+
+.field input::placeholder{
+    color: var(--sea);
+}
+
+.loginMenuButton{
+    width: 80%;
+}
+
+.loginMenuButton button{
+    width: 40%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--sea);
+    color: var(--tea);
+}
+
+.loginMenuButton button:hover{
+    cursor: pointer;
+}
+
+.slidingBackground{
+    background: url("../images/panel.png") repeat-x;
+    position: absolute;
+    height: 200px;
+    width: 3600px;
+}
+
+.slidingBackground:nth-child(1){
+    animation: slide 45s linear infinite;
+}
+
+.slidingBackground:nth-child(2){
+    top: 200px;
+    left: 30px;
+    animation: slide 54s reverse linear infinite;
+}
+
+.slidingBackground:nth-child(3){
+    top: 400px;
+    left: 80px;
+    animation: slide 36s linear infinite;
+}
+
+.slidingBackground:nth-child(4){
+    top: 600px;
+    animation: slide 63s reverse linear infinite;
+}
+
+.slidingBackground:nth-child(5){
+    top: 800px;
+    left: 120px;
+    animation: slide 27s linear infinite;
+}
+
+@keyframes slide{
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-1200px, 0, 0);
+    }
+  }

@@ -1,0 +1,29 @@
+.navbar {
+    height: 60px;
+    background-color: var(--sea);
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding: 0 30px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.loginButton{
+    width: auto;
+}
+
+.loginText{
+    font-size: 30px;
+    color: var(--tea);
+    font-weight: bold;
+    margin: 0;
+    text-decoration: none;
+    transition: color 1s cubic-bezier(.12,.69,.24,.96);
+}
+
+.loginText:hover{
+    color: var(--sage);
+    transition: color 1s cubic-bezier(.12,.69,.24,.96);
+    cursor: pointer;
+}
