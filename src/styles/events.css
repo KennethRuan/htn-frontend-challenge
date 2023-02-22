@@ -40,6 +40,9 @@
 }
 
 .searchbar input{
+    background-color: var(--tea);
+    border-radius: 20px;
+    border: none;
     box-sizing: border-box;
     font-size: 20px;
     text-indent: 10px;
