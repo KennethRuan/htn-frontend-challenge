@@ -83,8 +83,8 @@ class Events extends Component{
         var weekday = days[date.getDay()];
         var month = months[date.getMonth()];
         var day = date.getDate();
-        var hour = date.getHours() % 12;
-        var ampm = date.getHours() <= 12 ? 'AM' : 'PM';
+        var hour = (date.getHours() % 12 == 0) ? 12:date.getHours()%12;
+        var ampm = date.getHours() < 12 ? 'AM' : 'PM';
         var minute = "0" + date.getMinutes();
 
         var formatted = weekday + ', ' + month + ' ' + day + ' ' + hour + ':' + minute.slice(-2) + ' ' + ampm;
@@ -132,6 +132,7 @@ class Events extends Component{
 
     render(){
         let filteredEvents = this.state.events;
+
         if (this.state.viewRelatedEvents){
             filteredEvents = filteredEvents.filter((e, i)=>this.state.relatedEvents.includes(i+1));
         }
@@ -142,6 +143,9 @@ class Events extends Component{
             });
         }
 
+        filteredEvents = filteredEvents.sort((a, b) => {
+            return a.start_time - b.start_time;
+        })
 
         return(
             <div className="eventsWrapper">
