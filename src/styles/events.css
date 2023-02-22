@@ -212,7 +212,8 @@
     margin: 10px 0;
     display: flex;
     flex-direction: row;
-     gap: 5px;
+    flex-flow: row wrap;
+    gap: 5px;
 }
 
 .eventType, .eventPermission{
@@ -222,7 +223,8 @@
     justify-content: center;
     
     height: 25px;
-    max-width: 100%;
+    width: 40%;
+    min-width: fit-content;
     border-radius: 10px;
     box-sizing: border-box;
     padding: 10px;
@@ -231,4 +233,19 @@
     font-weight: bold;
     font-size: 14px;
     background-color: var(--myrtle);
+}
+
+@media (max-width:800px){
+    .eventTitle h1{
+        font-size: 20px;
+    }
+
+    .eventRight{
+        font-size: 8px;
+    }
+
+    .eventType, .eventPermission{
+        height: 15px;
+        font-size: 8px;
+    }
 }
